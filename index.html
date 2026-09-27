@@ -1,119 +1,140 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ravula Vamshi Reddy - Data Engineer</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #f9f9f9; color: #333; }
-        header { background-color: #003366; color: white; padding: 20px; text-align: center; }
-        section { padding: 20px; max-width: 1000px; margin: auto; }
-        h2 { color: #003366; border-bottom: 2px solid #ccc; padding-bottom: 5px; }
-        ul { padding-left: 20px; }
-        .contact, .education, .experience, .skills, .projects, .awards { margin-bottom: 30px; }
-        footer { background: #003366; color: white; text-align: center; padding: 10px; margin-top: 40px; }
-    </style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101b2b">
+  <meta name="description" content="Vamshi Reddy is a data engineer working with Azure, Spark, Kafka, Snowflake, and analytics-ready data.">
+  <title>Vamshi Reddy | Data Engineer</title>
+  <style>
+    :root { color-scheme: dark; --bg:#101b2b; --panel:#172539; --panel2:#1d2e44; --line:#33475e; --text:#f5f7fb; --muted:#b9c8d9; --accent:#83e0d4; --gold:#f2c879; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:var(--bg); color:var(--text); font:16px/1.6 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; }
+    a { color:inherit; text-underline-offset:.2em; }
+    a:hover { color:var(--accent); }
+    a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible { outline:3px solid var(--gold); outline-offset:3px; }
+    .wrap { width:min(1120px,calc(100% - 40px)); margin:auto; }
+    .skip { position:absolute; top:-60px; left:12px; padding:10px 14px; background:var(--gold); color:#101b2b; z-index:10; }
+    .skip:focus { top:12px; }
+    header { border-bottom:1px solid var(--line); }
+    .topbar { display:flex; justify-content:space-between; align-items:center; gap:24px; padding:22px 0; }
+    .brand { font-size:1.05rem; font-weight:800; letter-spacing:.02em; text-decoration:none; }
+    .brand span { color:var(--accent); }
+    nav { display:flex; flex-wrap:wrap; gap:12px 26px; }
+    nav a { color:var(--muted); font-size:.94rem; text-decoration:none; }
+    nav a:hover { color:var(--text); }
+    .hero { display:grid; grid-template-columns:minmax(0,1.35fr) minmax(250px,.65fr); align-items:center; gap:48px; padding:84px 0 88px; }
+    .eyebrow, .kicker { color:var(--accent); font-size:.86rem; font-weight:750; text-transform:uppercase; letter-spacing:.16em; }
+    h1 { max-width:760px; margin:15px 0 23px; font-size:clamp(2.6rem,6vw,5.2rem); line-height:1.08; letter-spacing:-.055em; }
+    h1 em { color:var(--accent); font-style:normal; }
+    .lead { max-width:650px; margin:0; color:var(--muted); font-size:clamp(1.06rem,2vw,1.24rem); line-height:1.65; }
+    .actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:31px; }
+    .button { display:inline-flex; align-items:center; justify-content:center; min-height:48px; padding:10px 20px; border:1px solid var(--accent); border-radius:6px; background:var(--accent); color:#10212a; font-weight:750; text-decoration:none; transition:transform .2s,background .2s; }
+    .button:hover { color:#10212a; background:#a8f3e9; transform:translateY(-2px); }
+    .button.secondary { color:var(--text); background:transparent; border-color:#7993ab; }
+    .button.secondary:hover { color:var(--accent); border-color:var(--accent); background:#1b3043; }
+    .hero-aside { border:1px solid var(--line); border-radius:12px; padding:28px; background:linear-gradient(145deg,#22364c,#142338); box-shadow:16px 16px 0 #0d1725; }
+    .hero-aside .small { color:var(--gold); font-size:.77rem; font-weight:750; text-transform:uppercase; letter-spacing:.14em; }
+    .hero-aside strong { display:block; margin:15px 0 24px; font-size:1.55rem; line-height:1.3; letter-spacing:-.035em; }
+    .flow { display:grid; grid-template-columns:1fr auto 1fr; align-items:center; gap:9px; font-size:.87rem; }
+    .flow span { padding:10px 8px; border:1px solid #5c7388; border-radius:5px; text-align:center; color:#d8e6f2; }
+    .flow b { color:var(--accent); font-size:1.2rem; }
+    section { scroll-margin-top:30px; padding:72px 0; border-top:1px solid var(--line); }
+    .section-head { display:flex; justify-content:space-between; align-items:end; gap:24px; margin-bottom:28px; }
+    h2 { margin:5px 0 0; font-size:clamp(2rem,4vw,2.9rem); line-height:1.15; letter-spacing:-.045em; }
+    .section-head p { max-width:440px; color:var(--muted); margin:0; }
+    .skills-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:14px; }
+    .card { background:var(--panel); border:1px solid var(--line); border-radius:9px; padding:24px; }
+    .card h3 { margin:0 0 11px; font-size:1.1rem; }
+    .card p { margin:0; color:var(--muted); }
+    .experience { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+    .role { border-left:3px solid var(--accent); background:var(--panel); padding:25px 28px; }
+    .role small { display:block; color:var(--gold); font-weight:700; letter-spacing:.03em; }
+    .role h3 { margin:10px 0 3px; font-size:1.35rem; }
+    .role .place { color:var(--muted); margin:0 0 16px; }
+    .role ul { margin:0; padding-left:20px; color:#d6e2ed; }
+    .role li + li { margin-top:7px; }
+    .feature { display:grid; grid-template-columns:1fr 1fr; gap:38px; align-items:center; padding:32px; background:var(--panel2); border:1px solid var(--line); border-radius:10px; }
+    .feature h3 { font-size:1.55rem; margin:8px 0 12px; }
+    .feature p { margin:0; color:var(--muted); }
+    .feature ol { margin:0; padding-left:25px; color:#e1eaf2; }
+    .feature li { padding:8px 0 8px 10px; border-bottom:1px solid var(--line); }
+    .feature li:last-child { border:0; }
+    .split { display:grid; grid-template-columns:1fr 1fr; gap:30px; }
+    .split h3 { margin:0 0 10px; font-size:1.25rem; }
+    .split p,.split li { color:var(--muted); }
+    .split ul { padding-left:20px; margin:0; }
+    .contact { display:grid; grid-template-columns:.8fr 1.2fr; gap:54px; }
+    .contact p { color:var(--muted); }
+    .contact-links { display:grid; gap:10px; margin-top:24px; overflow-wrap:anywhere; }
+    form { display:grid; gap:14px; }
+    label { display:block; font-weight:650; margin-bottom:6px; }
+    input,textarea { display:block; width:100%; border:1px solid #637992; border-radius:5px; padding:12px 13px; background:#112136; color:var(--text); font:inherit; }
+    textarea { min-height:135px; resize:vertical; }
+    button { cursor:pointer; justify-self:start; font:inherit; }
+    footer { padding:26px 0 38px; border-top:1px solid var(--line); color:var(--muted); font-size:.9rem; }
+    @media (max-width:780px) { .hero,.experience,.feature,.split,.contact { grid-template-columns:1fr; } .hero { padding:55px 0 66px; gap:34px; } .hero-aside { max-width:460px; box-shadow:8px 8px 0 #0d1725; } .skills-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } .section-head { display:block; } .section-head p { margin-top:14px; } }
+    @media (max-width:540px) { .wrap { width:min(100% - 30px,1120px); } .topbar { align-items:flex-start; flex-direction:column; gap:10px; } nav { gap:8px 17px; } .skills-grid { grid-template-columns:1fr; } section { padding:54px 0; } .feature { padding:22px; } }
+    @media (prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } .button { transition:none; } }
+  </style>
 </head>
-
-
-
 <body>
-
-<header>
-    <h1>Ravula Vamshi Reddy</h1>
-    <p>Big Data Engineer | Azure | Spark | Kafka | Python</p>
-    <p>📍 Overland Park, Kansas | 📞 913-544-4062 | 📧 reddyvamshir@gmail.com | <a href="https://www.linkedin.com/in/ravula-vamshi" style="color: #66ccff">LinkedIn</a></p>
-</header>
-
-<section class="summary">
-    <h2>Professional Summary</h2>
-    <p>Data Engineer with 3.5 years of experience in building scalable data pipelines for batch and real-time processing. Skilled in Hadoop, Spark, Hive, Azure, Python, and Kafka. Strong in analytics, technical problem-solving, and cross-functional team collaboration.</p>
-</section>
-
-<section class="skills">
-    <h2>Technical Skills</h2>
-    <ul>
-        <li>Data Engineering: Hadoop, Hive, Sqoop, Spark, Auto SYS</li>
-        <li>Languages: Python, SQL, Shell Scripting</li>
-        <li>Databases: MySQL, SQL Server</li>
-        <li>Cloud: Azure (ADF, Databricks, Synapse, ADLS)</li>
-        <li>Tools: Git, Putty, VS Code, SSMS</li>
-        <li>Visualization: Power BI, Tableau</li>
-    </ul>
-</section>
-
-<section class="experience">
-    <h2>Professional Experience</h2>
-    <h3>Data Engineer - TCS, Hyderabad</h3>
-    <p>Dec 2022 – Dec 2023</p>
-    <ul>
-        <li>Designed streaming and batch ETL pipelines using Kafka and Spark</li>
-        <li>Stored large-scale datasets in HDFS for ML and analytics</li>
-        <li>Automated jobs using AutoSys</li>
-    </ul>
-
-    <h3>Data Engineer - Capgemini, Bangalore</h3>
-    <p>Jan 2020 – July 2022</p>
-    <ul>
-        <li>Built pipelines using Azure Data Factory for QSR client (e.g., McDonald’s)</li>
-        <li>Delivered clean datasets for BI and ML use</li>
-        <li>Collaborated across regions to support analytics</li>
-    </ul>
-</section>
-
-<section class="education">
-    <h2>Education</h2>
-    <p><strong>University of Central Missouri</strong> – Master’s in Big Data Analytics (Jan 2024 – May 2025)</p>
-    <ul>
-        <li>GPA: 3.5 / 4.0</li>
-        <li>Paper: "Advancements in Real-Time Processing Frameworks for Big Data Analytics"</li>
-    </ul>
-</section>
-
-<section class="projects">
-    <h2>Projects</h2>
-    <h4>Real-Time Stock Market Analytics</h4>
-    <ul>
-        <li>Built using Python, PySpark, Power BI</li>
-        <li>Integrated live stock, economic, and sentiment data</li>
-        <li>Delivered predictive insights and visualizations</li>
-    </ul>
-</section>
-
-<section class="awards">
-    <h2>Honors & Certifications</h2>
-    <ul>
-        <li>"Rising Star" Award – Capgemini</li>
-        <li>"On the Spot" Award – TCS</li>
-        <li>Coursera: Programming for Everybody (Python)</li>
-        <li>HackerRank: SQL (Basic) Certification</li>
-    </ul>
-</section>
-
-
-<a href="resume.docx" download style="padding:10px; background:#003366; color:white; text-decoration:none; border-radius:5px;">
-  Download Resume
-</a>
-
-
-<h2>Contact Me</h2>
-<form action="https://formspree.io/f/myzwqdpr" method="POST">
-  <label>Name:</label><br>
-  <input type="text" name="name" required><br><br>
-
-  <label>Email:</label><br>
-  <input type="email" name="_replyto" required><br><br>
-
-  <label>Message:</label><br>
-  <textarea name="message" rows="5" required></textarea><br><br>
-
-  <button type="submit">Send Message</button>
-</form>
-
-
-<footer>
-    <p>&copy; 2024 Ravula Vamshi Reddy. All rights reserved.</p>
-</footer>
-
+  <a class="skip" href="#main">Skip to content</a>
+  <header>
+    <div class="wrap topbar">
+      <a class="brand" href="#top">Vamshi<span>.</span></a>
+      <nav aria-label="Main navigation">
+        <a href="#skills">Skills</a><a href="#experience">Experience</a><a href="#projects">Project</a><a href="#about">About</a><a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <div class="wrap hero" id="top">
+      <div>
+        <div class="eyebrow">Data engineer · Azure · Spark · Kafka</div>
+        <h1>Turning raw data into <em>reliable insight.</em></h1>
+        <p class="lead">I’m Vamshi Reddy. I build batch and streaming pipelines, shape data for analytics, and help teams trust the information behind their decisions.</p>
+        <div class="actions">
+          <a class="button" href="#projects">Explore my work</a>
+          <a class="button secondary" href="https://github.com/vamshiviko/vamshi-profile/blob/main/resume.docx">View résumé</a>
+        </div>
+      </div>
+      <aside class="hero-aside" aria-label="How I work">
+        <div class="small">What I work on</div>
+        <strong>From source systems to useful datasets.</strong>
+        <div class="flow"><span>Ingest</span><b aria-hidden="true">→</b><span>Transform</span><span>Validate</span><b aria-hidden="true">→</b><span>Analyze</span></div>
+      </aside>
+    </div>
+    <section id="skills"><div class="wrap">
+      <div class="section-head"><div><div class="kicker">01 / Toolkit</div><h2>Technical skills</h2></div><p>Tools I use to move, process, check, and present data.</p></div>
+      <div class="skills-grid">
+        <div class="card"><h3>Data processing</h3><p>Apache Spark, PySpark, Kafka, Hadoop, Hive, ETL and streaming workflows</p></div>
+        <div class="card"><h3>Cloud &amp; storage</h3><p>Azure Data Factory, Databricks, ADLS, Synapse, Snowflake</p></div>
+        <div class="card"><h3>Analytics &amp; code</h3><p>SQL, Python, Power BI, Tableau, shell scripting, AutoSys</p></div>
+      </div>
+    </div></section>
+    <section id="experience"><div class="wrap">
+      <div class="section-head"><div><div class="kicker">02 / Career</div><h2>Experience</h2></div></div>
+      <div class="experience">
+        <article class="role"><small>Dec 2022 – Dec 2023</small><h3>Data Engineer</h3><p class="place">TCS · Hyderabad</p><ul><li>Built batch and streaming ETL pipelines with Kafka and Spark.</li><li>Used HDFS to support large-scale analytics workloads.</li><li>Scheduled and automated data jobs with AutoSys.</li></ul></article>
+        <article class="role"><small>Jan 2020 – Jul 2022</small><h3>Data Engineer</h3><p class="place">Capgemini · Bengaluru</p><ul><li>Built Azure Data Factory pipelines for a quick-service restaurant client.</li><li>Prepared clean datasets for business intelligence and machine learning.</li><li>Worked with distributed teams to support analytics delivery.</li></ul></article>
+      </div>
+    </div></section>
+    <section id="projects"><div class="wrap">
+      <div class="section-head"><div><div class="kicker">03 / Selected project</div><h2>Real-time market analytics</h2></div></div>
+      <article class="feature"><div><div class="kicker">Python · PySpark · Power BI</div><h3>From live signals to a usable view</h3><p>A project combining stock, economic, and sentiment data to support visual analysis and predictive insights.</p></div><ol><li>Bring together several live data sources.</li><li>Process and prepare the data with Python and PySpark.</li><li>Present trends and insights in Power BI.</li></ol></article>
+    </div></section>
+    <section id="about"><div class="wrap">
+      <div class="section-head"><div><div class="kicker">04 / Background</div><h2>Education &amp; recognition</h2></div></div>
+      <div class="split"><div><h3>University of Central Missouri</h3><p>Master’s in Big Data Analytics · 2024–2025</p><p>Research paper: “Advancements in Real-Time Processing Frameworks for Big Data Analytics.”</p></div><div><h3>Awards &amp; certifications</h3><ul><li>Rising Star Award · Capgemini</li><li>On the Spot Award · TCS</li><li>HackerRank SQL (Basic)</li><li>Coursera: Programming for Everybody (Python)</li></ul></div></div>
+    </div></section>
+    <section id="contact"><div class="wrap contact">
+      <div><div class="kicker">05 / Get in touch</div><h2>Let’s connect.</h2><p>Have a data engineering role or a project in mind? Reach me by email, LinkedIn, or this form.</p><div class="contact-links"><a href="mailto:reddyvamshir@gmail.com">reddyvamshir@gmail.com</a><a href="https://www.linkedin.com/in/ravula-vamshi/" rel="noopener noreferrer">LinkedIn profile</a><a href="https://github.com/vamshiviko" rel="noopener noreferrer">GitHub profile</a></div></div>
+      <form action="https://formspree.io/f/myzwqdpr" method="post"><div><label for="name">Name</label><input id="name" name="name" autocomplete="name" required></div><div><label for="email">Email</label><input id="email" type="email" name="_replyto" autocomplete="email" required></div><div><label for="message">Message</label><textarea id="message" name="message" required></textarea></div><button class="button" type="submit">Send message</button></form>
+    </div></section>
+  </main>
+  <footer><div class="wrap">© <span id="year">2026</span> Vamshi Reddy</div></footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
 </body>
 </html>
